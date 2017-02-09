@@ -214,12 +214,12 @@ public class Grid {
             }
         });
 
-        System.out.println("     X-->");
+        System.out.println("      X-->");
         for (int y = 0; y < this.width + 1; y++) {
             if (y == 0) {
-                System.out.print("     ");
+                System.out.print("      ");
             } else {
-                System.out.print(y + " ");
+                System.out.print(y + "  ");
             }
         }
         System.out.println("");
@@ -227,13 +227,15 @@ public class Grid {
         for (int y = 0; y < this.height; y++) {
 
             if (y == 0) {
-                gridToPrint += "\nY " + (y + 1) + "  ";
+                gridToPrint += "\nY " + (y + 1) + "   ";
             } else if (y == 1) {
-                gridToPrint += "| " + (y + 1) + "  ";
+                gridToPrint += "| " + (y + 1) + "   ";
             } else if (y == 2) {
-                gridToPrint += "v " + (y + 1) + "  ";
+                gridToPrint += "v " + (y + 1) + "   ";
+            } else if (y >= 9) {
+                gridToPrint += "  " + (y + 1) + "    ";
             } else {
-                gridToPrint += "  " + (y + 1) + "  ";
+                gridToPrint += "  " + (y + 1) + "   ";
             }
 
             for (int x = 0; x < this.width; x++) {

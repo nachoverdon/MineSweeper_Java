@@ -73,11 +73,6 @@ public class MineSweeper {
 
         num = sc.nextInt();
 
-        while (num < 0 || num > MineSweeper.MAX_NUMBER) {
-            num = selectInt("El número tiene que ser entre 1 y " +
-                    MineSweeper.MAX_NUMBER);
-        }
-
         return num;
     }
 
